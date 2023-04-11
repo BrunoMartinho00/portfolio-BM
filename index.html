@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Martinho</title>
+    <meta name="author" content="Bruno Martinho">
+    <meta name="description" content="O meu Portfolio">
+    <meta name="keywords" content="Portfolio">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" id="homeButton">Bruno Martinho</a>
+        <button><span class="material-symbols-outlined" id="darkModeBTN">light_mode</span></button>
+        <nav>
+            <a href="index.html" class="naveg">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="curriculo.html" class="naveg">Sobre mim▾</a>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="curriculo.html#formacao">Educação</a>
+                    <a href="curriculo.html#participacoes">Participações</a>
+                    <a href="curriculo.html#interesses">Interesses e hobbies</a>
+                </div>
+            </div>
+            <a href="projetos.html" class="naveg">Projetos</a>
+            <a href="contacto.html" class="naveg">Contactos</a>
+            <a href="scripts.html" class="naveg">Scripts</a>
+        </nav>
+    </header>
+
+
+    <video autoplay muted loop id="myVideo">
+        <source src="source/10mb branco.mp4" type="video/mp4" id="backgroundVideo">
+        <source src="source/10mb preta.mp4" type="video/mp4" id="backgroundVideo1">
+        Your browser does not support HTML5 video.
+    </video>
+    <div id="myVideoOverlay"></div>
+
+
+    <main class="index">
+        <div id="maincontent">
+            <div id="profile">
+                <img src="source/profile.png" alt="">
+                <h1>Bruno</h1>
+                <h1>Martinho</h1>
+                <div id="square"></div>
+                <h2>Desenvolvedor</h2>
+            </div>
+            <div id="description">
+                <h1>Olá</h1>
+                <h2>Bem-vindo ao meu Portfolio</h2>
+                <div id="buttons">
+                    <a href="curriculo.html" id="btn1">Currículo</a>
+                    <a href="projetos.html" id="btn2">Projetos</a>
+                </div>
+                <p>Sou aficionado pelas novas tecnologias, pelo desafio de criar soluções, pela troca de experiência e
+                    pela constante aprendizagem. Curso Engenharia Informática e pretendo desenvolver competências na
+                    área....</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footerMain">
+        <div id="universidade">
+            <img src="source/lusofona small.png" alt="" height="40px">
+            <div>
+                <p>Universidade Lusófona</p>
+                <p>Engenharia informática</p>
+                <p>Programação Web</p>
+            </div>            
+        </div>
+
+        <a href="source/site map.jpg" target="_blank">Mapa do site</a>
+
+        <div id="autor">
+            <p>Criado por Bruno Martinho</p>
+            <p>bruno.martinho.2000@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeButton = document.querySelector('#darkModeBTN');
+        var vid = document.getElementById("myVideo");
+
+        darkModeButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.value == 'dark-mode') {
+                document.getElementById("header").classList.add("darkMode");
+                document.getElementsByClassName("dropdown-content")[0].classList.add("darkMode");
+                document.getElementById("darkModeBTN").textContent="dark_mode";
+                document.getElementById("darkModeBTN").classList.add("darkMode");
+                document.querySelector('footer').classList.add("darkMode");
+                vid.src = "source/10mb preto.mp4";
+                document.getElementById("myVideoOverlay").style.backgroundColor = "rgba(50, 50, 50, 0.9)";
+                document.getElementById("profile").classList.add("darkMode");
+            } else {
+                document.getElementById("header").classList.remove("darkMode");
+                document.getElementsByClassName("dropdown-content")[0].classList.remove("darkMode");
+                document.getElementById("darkModeBTN").textContent="light_mode";
+                document.getElementById("darkModeBTN").classList.remove("darkMode");
+                document.querySelector('footer').classList.remove("darkMode");
+                vid.src = "source/10mb branco.mp4";
+                document.getElementById("myVideoOverlay").style.backgroundColor = "rgba(236, 230, 230, 0.95)";
+                document.getElementById("profile").classList.remove("darkMode");
+            }
+            
+            
+
+        });
+    </script>
+</body>
+
+</html>

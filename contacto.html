@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Bruno Martinho</title>
+    <meta name="author" content="Bruno Martinho">
+    <meta name="description" content="O meu Portfolio">
+    <meta name="keywords" content="Portfolio">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" id="homeButton">Bruno Martinho</a>
+        <button><span class="material-symbols-outlined" id="darkModeBTN">light_mode</span></button>
+        <nav>
+            <a href="index.html" class="naveg">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="curriculo.html" class="naveg">Sobre mim▾</a>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="curriculo.html#formacao">Educação</a>
+                    <a href="curriculo.html#participacoes">Participações</a>
+                    <a href="curriculo.html#interesses">Interesses e hobbies</a>
+                </div>
+            </div>
+            <a href="projetos.html" class="naveg">Projetos</a>
+            <a href="contacto.html" class="naveg">Contactos</a>
+            <a href="scripts.html" class="naveg">Scripts</a>
+        </nav>
+    </header>
+
+    <main class="contactos">
+        <table>
+            <th id="infos">
+                <div>
+                    <h1>Contactos</h1>
+                    <h2>Email</h2>
+                    <h3>bruno.martinho.2000@gmail.com</h3>
+                    <h2>Zona</h2>
+                    <h3>Lisboa, Portugal</h3>
+                </div>
+            </th>
+            <th id="buttons">
+                <div id="buttonsZone">
+                    <a href="https://www.facebook.com/brunomartinho00/" class="circle"><img
+                            src="source/facebook icon.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/brunomartinho20/" class="circle"><img
+                            src="source/instagram icon.png" alt="instagram"></a>
+                    <a href="https://www.linkedin.com/in/brunomartinho00/" class="circle"><img
+                            src="source/linkedin icon.png" alt="linkedin"></a>
+                    <a href="https://github.com/BrunoMartinho00" class="circle"><img src="source/github icon.png"
+                            alt="github"></a>
+                </div>
+
+            </th>
+        </table>
+    </main>
+
+    <footer>
+        <div id="universidade">
+            <img src="source/lusofona small.png" alt="" height="40px">
+            <div>
+                <p>Universidade Lusófona</p>
+                <p>Engenharia informática</p>
+                <p>Programação Web</p>
+            </div>            
+        </div>
+
+        <a href="source/site map.jpg" target="_blank">Mapa do site</a>
+
+        <div id="autor">
+            <p>Criado por Bruno Martinho</p>
+            <p>bruno.martinho.2000@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+        const darkModeButton = document.querySelector('#darkModeBTN');
+        var vid = document.getElementById("myVideo");
+
+        darkModeButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.value == 'dark-mode') {
+                document.getElementById("header").classList.add("darkMode");
+                document.getElementsByClassName("dropdown-content")[0].classList.add("darkMode");
+                document.getElementById("darkModeBTN").textContent = "dark_mode";
+                document.getElementById("darkModeBTN").classList.add("darkMode");
+                document.querySelector('footer').classList.add("darkMode");
+                /////////////////////
+                document.getElementsByClassName("contactos")[0].classList.add("darkMode");
+            } else {
+                document.getElementById("header").classList.remove("darkMode");
+                document.getElementsByClassName("dropdown-content")[0].classList.remove("darkMode");
+                document.getElementById("darkModeBTN").textContent = "light_mode";
+                document.getElementById("darkModeBTN").classList.remove("darkMode");
+                document.querySelector('footer').classList.remove("darkMode");
+                /////////////////////
+                document.getElementsByClassName("contactos")[0].classList.remove("darkMode");
+            }
+        });
+    </script>
+</body>
+
+</html>

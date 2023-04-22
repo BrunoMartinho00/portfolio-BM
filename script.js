@@ -5,14 +5,11 @@ function loadStyle() {
     console.log("Darkmode: " + darkModeStat);
 
     if (darkModeStat == null) {
-        console.log("Esta null");
         localStorage.setItem("darkModeStat", 0);
     } else {
         if (darkModeStat == 1) {
-            console.log("Esta dark");
             setDarkMode();
         } else {
-            console.log("estou light");
             setLightMode();
         }
     }

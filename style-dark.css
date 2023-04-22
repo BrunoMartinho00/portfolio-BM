@@ -1,6 +1,8 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
+  box-sizing: border-box;
+  color: white;
 }
 
 html,
@@ -22,27 +24,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 9;
-  background-color: white;
-}
-
-header.darkMode {
   background-color: rgba(50, 50, 50, 0.9);
-  color: white;
-}
-
-header.darkMode #homeButton:active,
-header.darkMode #homeButton:visited,
-header.darkMode #homeButton:link,
-header.darkMode #homeButton:hover,
-header.darkMode a:active,
-header.darkMode a:visited,
-header.darkMode a:link {
-  /*background-color: rgba(50, 50, 50, 0.9);*/
-  color: white;
-}
-
-header.darkMode a:hover {
-  color: rgb(170, 170, 255);
 }
 
 header #homeButton:active,
@@ -53,7 +35,7 @@ header #homeButton:hover {
   text-decoration: none;
   font-size: 31px;
   margin: auto 0;
-  color: black;
+  color: white;
 }
 
 header > nav {
@@ -69,7 +51,7 @@ header .dropdown .dropbtn {
   font-size: 16px;
   border: none;
   outline: none;
-  color: black;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -78,7 +60,7 @@ header .dropdown .dropbtn {
 
 header .naveg:link,
 header .naveg:visited {
-  color: black;
+  color: white;
 }
 
 header .naveg:hover,
@@ -96,19 +78,15 @@ header .dropdown {
 header .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #6a6a6a;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-header .dropdown-content.darkMode {
-  background-color: #6a6a6a;
-}
-
 header .dropdown-content a {
   float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -124,27 +102,14 @@ header button {
   background-color: rgba(0, 0, 0, 0);
 }
 
-header #darkModeBTN {
-  display: flex;
-  align-items: center;
-}
-
 header #darkModeBTN:hover {
   color: blue;
-}
-
-header #darkModeBTN.darkMode {
-  color: white;
-}
-
-header #darkModeBTN.darkMode:hover {
-  color: rgb(170, 170, 255);
 }
 
 /*******************************************************/
 
 footer {
-  background-color: white;
+  background-color: rgba(50, 50, 50, 0.9);
   height: 60px;
   max-height: 90px;
   bottom: 0;
@@ -157,10 +122,6 @@ footer {
 #footerMain {
   position:fixed ;
   width: 100%;
-}
-
-footer.darkMode {
-  background-color: rgba(50, 50, 50, 0.9);
 }
 
 footer #universidade {
@@ -176,11 +137,6 @@ footer #universidade p {
 
 footer #universidade img {
   margin-right: 10px;
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
-}
-
-footer.darkMode #universidade img {
-  filter: none;
 }
 
 footer a:active,
@@ -188,22 +144,12 @@ footer a:visited,
 footer a:link {
   font-size: medium;
   font-family: monospace;
-  color: black;
-  text-decoration: none;
-}
-
-footer.darkMode a:active,
-footer.darkMode a:visited,
-footer.darkMode a:link {
   color: white;
+  text-decoration: none;
 }
 
 footer a:hover {
   color: blue;
-}
-
-footer.darkMode a:hover {
-  color: rgb(170, 170, 255);
 }
 
 footer #autor {
@@ -233,7 +179,7 @@ footer #autor p {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  background-color: rgba(236, 230, 230, 0.95);
+  background-color: rgba(50, 50, 50, 0.9);
 }
 
 .index main {
@@ -250,15 +196,10 @@ footer #autor p {
 }
 
 .index #profile {
-  background-color: gainsboro;
+  background-color: rgb(43, 43, 43);
   width: 300px;
   height: 450px;
   box-shadow: 7px 10px 20px 2px rgba(143, 143, 143, 0.521);
-}
-
-.index #profile.darkMode {
-  background-color: rgb(43, 43, 43);
-  box-shadow: 7px 10px 20px 2px rgba(143, 143, 143, 0.221);
 }
 
 .index #profile > img {
@@ -367,15 +308,11 @@ footer #autor p {
 /*******************************************************/
 
 .curriculo {
-  background-color: #e8e6e6;
+  background-color: rgb(50, 50, 50);
   margin: 0;
   padding: 30px;
   justify-content: center;
   display: grid;
-}
-
-.curriculo.darkMode {
-  background-color: rgb(50, 50, 50);
 }
 
 .curriculo h1 {
@@ -419,17 +356,13 @@ p {
 }
 
 .curriculo > div > .content {
-  background-color: aliceblue;
+  background-color: #515151;
   box-shadow: 7px 10px 20px 2px rgba(143, 143, 143, 0.221);
 
   height: 300px;
   max-width: 700px;
   width: 700px;
   margin: 0 0 20px 0;
-}
-
-.curriculo > div > .content.darkMode {
-  background-color: #515151;
 }
 
 .curriculo table {
@@ -514,15 +447,11 @@ p {
 /*******************************************************/
 
 .projetos {
-  background-color: #e8e6e6;
+  background-color: rgb(50, 50, 50);
   margin: 0;
   padding: 30px;
   justify-content: center;
   display: grid;
-}
-
-.projetos.darkMode {
-  background-color: rgb(50, 50, 50);
 }
 
 .projetos h1 {
@@ -532,21 +461,13 @@ p {
 }
 
 .projetos > .content {
-  background-color: aliceblue;
+  background-color: #515151;
   box-shadow: 7px 10px 20px 2px rgba(143, 143, 143, 0.221);
 
   height: 200px;
   max-width: 700px;
   width: 700px;
   margin: 0 0 20px 0;
-}
-
-.projetos > .content.darkMode {
-  background-color: #515151;
-}
-
-.projetos > .content.darkMode h3 {
-  color: rgb(6, 6, 140);
 }
 
 .projetos table {
@@ -580,7 +501,7 @@ p {
 }
 
 .projetos table h3 {
-  color: blue;
+  color: rgb(6, 6, 140);
   margin: 7px;
   font-weight: bold;
   word-wrap: break-word;
@@ -596,13 +517,9 @@ p {
 /*******************************************************/
 
 .contactos {
-  background-color: #e8e6e6;
+  background-color: rgb(50, 50, 50);
   width: 100%;
   height: 90%;
-}
-
-.contactos.darkMode {
-  background-color: rgb(50, 50, 50);
 }
 
 .contactos table {
@@ -688,27 +605,18 @@ p {
   }
 }
 
-.dark-mode {
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #fff;
-}
-
 /*******************************************************/
 
 .scripts {
-  background-color: #e8e6e6;
+  background-color: rgb(50, 50, 50);
   margin: 0;
   padding: 30px;
   justify-content: center;
   display: grid;
 }
 
-.scripts.darkMode {
-  background-color: rgb(50, 50, 50);
-}
-
 .scripts .content {
-  background-color: aliceblue;
+  background-color: #515151;
   box-shadow: 7px 10px 20px 2px rgba(143, 143, 143, 0.221);
 
   height: 200px;
@@ -720,12 +628,16 @@ p {
   display: grid;
 }
 
-.scripts > .content.darkMode {
-  background-color: #515151;
+.scripts button {
+  background-color: rgb(26, 29, 30);
 }
 
 .scripts .content div {
   margin: 0 auto;
+}
+
+input, textarea, select, button, dialog {
+  background-color: #1a1d1e;
 }
 
 .scripts #fotografiaInspiradora {
@@ -758,3 +670,4 @@ p {
 .scripts > .content input.darkMode {
   background-color: darkgray;
 }
+
